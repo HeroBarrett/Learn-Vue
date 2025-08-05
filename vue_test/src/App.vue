@@ -1,21 +1,32 @@
 <template>
-	<div>
-		<img src="./assets/logo.png" alt="logo">
-		<SchoolName></SchoolName>
-		<StudentName></StudentName>
-	</div>
+  <div>
+    <h1 v-text="msg" ref="title"></h1>
+    <button @click="showDOM">点我输出上方的DOM元素</button>
+    <SchoolName/>
+  </div>
 </template>
 
 <script>
-	//引入组件
-	import SchoolName from './components/SchoolName'
-	import StudentName from './components/StudentName'
-
-	export default {
-		name:'App',
-		components:{
-			SchoolName,
-			StudentName
-		}
-	}
+  import SchoolName from './components/SchoolName.vue'
+  export default {
+    name:'App',
+    components: {
+      SchoolName
+    },
+    data() {
+      return {
+        msg: '欢迎学习Vue!!!'
+      }
+    },
+    methods: {
+      showDOM() {
+        console.log(this.$refs.title);
+        
+      }
+    },
+  }
 </script>
+
+<style>
+
+</style>
