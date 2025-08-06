@@ -61,13 +61,13 @@
 			}
 		},
 		mounted() {
-			this.$bus.$on('checkTodo', this.checkTodo)
-			this.$bus.$on('deleteTodo', this.deleteTodo)
+			this.$bus.$on('checkTodo',this.checkTodo)
+			this.$bus.$on('deleteTodo',this.deleteTodo)
 		},
 		beforeDestroy() {
 			this.$bus.$off('checkTodo')
 			this.$bus.$off('deleteTodo')
-		}
+		},
 	}
 </script>
 
