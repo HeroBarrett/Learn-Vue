@@ -1,7 +1,7 @@
 <template>
   <li>
     <label>
-      <input type="checkbox" :checked="todo.done"/>
+      <input type="checkbox" :checked="todo.done" @change="handleCheck(todo.id)"/>
       <span>{{todo.title}}</span>
     </label>
     <button class="btn btn-danger" style="display: none">删除</button>
@@ -11,11 +11,17 @@
 <script>
 export default {
   name: 'MyItem',
-  props:['todo'],
+  props:['todo', 'checkTodo'],
   /* mounted() {
     // console.log(this.todo);
     
   }, */
+  methods: {
+    handleCheck(id) {
+      // console.log(id);
+      this.checkTodo(id)
+    }
+  }
 }
 </script>
 

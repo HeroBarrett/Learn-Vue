@@ -1,26 +1,23 @@
 <template>
   <ul class="todo-main">
-    <MyItem v-for="todoObj in todos" :key="todoObj.id" :todo="todoObj"/>
+    <MyItem
+      v-for="todoObj in todos"
+      :key="todoObj.id"
+      :todo="todoObj"
+      :checkTodo="checkTodo"
+    />
   </ul>
 </template>
 
 <script>
-import MyItem from './MyItem.vue'
+import MyItem from "./MyItem.vue";
 export default {
-  name: 'MyList',
+  name: "MyList",
   components: {
-    MyItem
+    MyItem,
   },
-  data() {
-    return {
-      todos:[
-        {id:'001', title: '抽烟', done: true},
-        {id:'002', title: '喝酒', done: false},
-        {id:'003', title: '开车', done: true},
-      ]
-    }
-  },
-}
+  props: ["todos", "checkTodo"],
+};
 </script>
 
 <style scoped>
