@@ -5,10 +5,9 @@
 </template>
 
 <script>
-import Count from "./components/Count.vue";
+	import Count from './components/Count'
 	export default {
 		name:'App',
-		components:{ Count },
+		components:{Count},
 	}
 </script>
-
