@@ -160,3 +160,121 @@
 /**
  * 枚举类型
  */
+// function walk(str: string) {
+//   if (str === 'up') {
+//     console.log("向[上]走");
+//   } else if (str === 'down') {
+//     console.log("向[下]走");
+//   } else if (str === 'left') {
+//     console.log("向[左]走");
+//   } else if (str === 'right') {
+//     console.log("向[右]走");
+//   } else {
+//     console.log("未知方向");
+//   }
+// }
+
+// walk('up');
+// walk('down');
+// walk('left');
+// walk('right');
+
+// const enum Direction {
+//   Up,
+//   Down,
+//   Left,
+//   Right
+// }
+
+// console.log(Direction.Up);
+
+// function walk(data: Direction) {
+//   // console.log(str);
+//   if (data === Direction.Up) {
+// 	console.log("向【上】⾛");
+// 	} else if (data === Direction.Down) {
+// 	console.log("向【下】⾛");
+// 	} else if (data === Direction.Left) {
+// 	console.log("向【左】⾛");
+// 	} else if (data === Direction.Right) {
+// 	console.log("向【右】⾛");
+// 	} else {
+// 	console.log("未知⽅向");
+// 	}
+// }
+
+// walk(Direction.Down)
+
+
+
+/**
+ * type类型
+ */
+// type Status = number | string
+// type Gender = '男' | '女'
+
+// function printStatus(data:Status):void {
+//   console.log(data);
+// }
+// function printGender(data:Gender):void {
+//   console.log(data);
+// }
+
+// printStatus('404')
+// printGender('女')
+
+
+// type Area = {
+//   height: number; //⾼
+//   width: number; //宽
+// };
+
+// type Address = {
+//   num: number //楼号
+//   cell: number //单元
+//   room: string //房间号
+// }
+
+// type House = Area & Address
+
+// const house: House = {
+//   height: 100,
+//   width: 100,
+//   num: 12,
+//   cell: 1,
+//   room: '03'
+// }
+
+// function demo(): void {
+//   // 返回undefined合法
+//   return undefined
+//   // 以下返回均不合法
+//   // return 100
+//   // return false
+//   // return null
+//   // return []
+// }
+// demo()
+
+
+
+
+
+// function LogFunc():void {
+
+// }
+
+// type LogFunc = () => void
+
+// const f1: LogFunc = function() {
+//   return 999
+// }
+
+// const f2: LogFunc = () => 666
+// const f3: LogFunc = function () {
+
+// }
+
+// const src = [1, 2, 3]
+// const dst = [0]
+// src.forEach(el => dst.push[el])
